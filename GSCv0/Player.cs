@@ -155,5 +155,37 @@ public class Player
         return true;
     }
 
+    public void EnterNextFreeOrangeFieldWithFive()
+    {
+        EnterNextFreeOrangeField(5);
+    }
 
+    public void EnterUnusedYellowField()
+    {
+        for (int i = 0; i < scoreFields.Length; i += 2)
+        {
+            if (scoreFields[i] == 0)
+            {
+                scoreFields[i] = 1;
+                break;
+            }
+        }
+    }
+
+    public void EnterNextFreePurpleFieldWithSix()
+    {
+        EnterNextFreePurpleField(6);
+    }
+
+    public void RerollDice(List<int> availableDice)
+    {
+        dice.Clear();
+        dice.AddRange(availableDice);
+    }
+
+    public void EnterNextFreeOrangeFieldWithSix()
+    {
+        EnterNextFreeOrangeField(6);
+    }
+}
 
